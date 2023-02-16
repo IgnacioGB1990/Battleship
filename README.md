@@ -1,7 +1,7 @@
 # Battleship
 Battleship game developed using Numpy.
 
-In this version of the game the user will be able to play agains a computer. Each will have randomly selected their boat position prior the start of the game. The number of boats consist of:
+In this version of the game the user will be able to play against the computer a simplified version of Battleship. Each player will be assigned a random boat position prior the start of the game. The number of boats consist of:
 
 
 * 4 boats with length of 1
