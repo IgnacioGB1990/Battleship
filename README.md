@@ -15,7 +15,7 @@ In this version of the game the user will be able to play against the computer a
 
 2. For every successful hit the user gets another try.
 
-3. Match ends when player manages to sink rivals boats.
+3. Match ends when player manages to sink all rivals boats.
 
 ### Legend
 1. "-" = water
