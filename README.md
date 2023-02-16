@@ -17,7 +17,7 @@ In this version of the game the user will be able to play against the computer a
 
 3. Match ends when player manages to sink rivals boats.
 
-Icon meanings:
+### Legend
 1. "-" = water
 2. "O" = part of ship located
 3. "X" = part of ship damaged
