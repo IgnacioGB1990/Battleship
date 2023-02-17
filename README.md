@@ -1,4 +1,4 @@
-# Battleship ⛴ Hello
+# Battleship ⛴
 Battleship game developed using Python and Numpy.
 
 In this version of the game the user will be able to play against the computer a simplified version of Battleship.
