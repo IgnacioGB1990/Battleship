@@ -1,5 +1,6 @@
 
 import numpy as np
+import constants
 import random
 
 
@@ -8,8 +9,6 @@ def position_boat(eslora,tablero):
 
         # 'N' - 'S' - 'E' - 'O'
         orient = random.choice(['N', 'S', 'E', 'O'])
-
-    
 
         # Posicion inicial del barco
         current_pos = np.random.randint(10, size = 2)
@@ -52,11 +51,17 @@ def position_boat(eslora,tablero):
 
 def seek_and_destroy(x,y,tablero_computer):
     if tablero_computer[x,y]=="O":
-        print("Has dado al barco!")
-        tablero_computer[x,y]="-"
+        print("Boat hit! Go again: ")
+        tablero_computer[x,y]="X"
+        constants.boats_alive-=1
         print(tablero_computer)
-    elif tablero_computer[x,y]=="-":
+    elif tablero_computer[x,y]=="X" or tablero_computer[x,y]=="-":
         print("Melón! Ya habías dado estas coordenadas")
+    else:
+        tablero_computer[x,y]="-"
+        print("AGUA!")
+        print(tablero_computer)
+
     
         
 

@@ -8,6 +8,7 @@ import numpy as np
 
 tablero = np.full((10,10)," ")
 
+boats_alive = 4
 
 d = {
   "a":{
