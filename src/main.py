@@ -13,6 +13,8 @@ tablero_computer = np.full(fill_value = ' ', shape = (10, 10))
 boat_size_array = [4,3,3,2,2,2,1,1,1,1]
 
 
+
+
 for eslora in boat_size_array:
     utils.position_boat(eslora,tablero)
     utils.position_boat(eslora,tablero_computer)
