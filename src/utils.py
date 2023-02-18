@@ -1,6 +1,6 @@
 
 import numpy as np
-import constants
+import constants as k
 import random
 
 
@@ -49,22 +49,34 @@ def position_boat(eslora,tablero):
             continue
 
 
-def seek_and_destroy(x,y,tablero_computer):
-    if tablero_computer[x,y]=="O":
-        print("Boat hit! Go again: ")
-        tablero_computer[x,y]="X"
-        constants.boats_alive-=1
-        print(tablero_computer)
-    elif tablero_computer[x,y]=="X" or tablero_computer[x,y]=="-":
-        print("Melón! Ya habías dado estas coordenadas")
+def seek_and_destroy(x,y,computerBoard,tablero_blanco_computer):
+    if computerBoard[x,y]=="O":
+        print(">>>>>>>>>>>>>>>  HIT <<<<<<<<<<<<<<< ")
+        computerBoard[x,y]="X"
+        tablero_blanco_computer[x,y]="X"
+        k.boats_alive_computer-=1
+    elif computerBoard[x,y]=="X" or computerBoard[x,y]=="-":
+        print("You already tried to shoot that target!")
     else:
-        tablero_computer[x,y]="-"
-        print("AGUA!")
-        print(tablero_computer)
+        computerBoard[x,y]="-"
+        tablero_blanco_computer[x,y]="-"
+        print("<<<<<<<<<<<<<<   WATER >>>>>>>>>>>>>>>")
 
+
+def computerAttacks(playerBoard,x,y):
+
+    if playerBoard[x,y]=="O":
+        playerBoard[x,y]=="X"
+        k.playerLives-=1
+    
     
         
+def generateRandomBoard(tablero):
 
+
+    for eslora in k.boat_size_array:
+        position_boat(eslora,tablero)
+        #utils.position_boat(eslora,tablero_computer)
     
 
        

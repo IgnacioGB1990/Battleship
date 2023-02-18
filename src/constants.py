@@ -6,9 +6,18 @@
 
 import numpy as np
 
-tablero = np.full((10,10)," ")
 
-boats_alive = 4
+
+
+boat_size_array = [4,3,3,2,2,2,1,1,1,1]
+
+computerLives = 4
+
+playerLives = 20
+
+
+
+
 
 d = {
   "a":{

@@ -1,58 +1,71 @@
 import numpy as np
 import utils
-import constants
-# Barcos
-# 4 boats with length of 1
-# 3 boats with length of 2
-# 2 boats with length of 3
-# 1 boat with length of 4
+import constants as k
 
-tablero = np.full(fill_value = ' ', shape = (10, 10))
-tablero_computer = np.full(fill_value = ' ', shape = (10, 10))
+playerBoard = np.full(fill_value = ' ', shape = (10, 10))
+tablero_blanco = np.full(fill_value = ' ', shape = (10, 10))
 
-tablero_computer[0:2,0:2]="O"
-boat_size_array = [4,3,3,2,2,2,1,1,1,1]
+tablero_blanco_computer = np.full(fill_value = ' ', shape = (10, 10))
+computerBoard = np.full(fill_value = ' ', shape = (10, 10))
+computerBoard[0:2,0:2]="O"
 
 
 
+def playerMove():
 
-for eslora in boat_size_array:
-    utils.position_boat(eslora,tablero)
-    #utils.position_boat(eslora,tablero_computer)
+    while k.computerLives>0:
 
+        print("---------------  SHOTS FIRED -----------")
+        print(tablero_blanco_computer)
 
-
-
-  
-print("Tu tablero")
-print(tablero)
-print("El del ordenador")
-print(tablero_computer)
+        print("--------------   MY BOARD ------------")
+        print(playerBoard)
 
 
-while constants.boats_alive>0:
 
+        x = input("x: ")
+        if x.lower()=="exit" or x.lower()=="surrender":
+            print("GAME ENDED")
+            break
+        y = input("y: ")
+        if y.lower()=="exit" or y.lower()=="surrender":
+            print("GAME ENDED")
+            break
+        else:
+            x = int(x)
+            y = int(y)
+            utils.seek_and_destroy(x,y,computerBoard,tablero_blanco_computer)
+            print("Boats left:",k.computerLives)
 
-    x = input("Introduce tu coordenada x: ")
-    if x.lower()=="exit" or x.lower()=="surrender":
-        print("GAME ENDED")
-        break
-    y = input("Introduce tu coordenada y: ")
-    if y.lower()=="exit" or y.lower()=="surrender":
-        print("GAME ENDED")
-        break
-    else:
-        x = int(x)
-        y = int(y)
-        utils.seek_and_destroy(x,y,tablero_computer)
-        print(constants.boats_alive)
+def computerMove(playerBoard):
 
+    while k.playerLives>0:
 
-if constants.boats_alive ==0:
-    print("CONTRATULATIONS YOU WON !!!") 
+        attackCoord = np.random.randint(10, size = 2)
 
+        x =  attackCoord[0]
+        y = attackCoord[1]
+        
+        utils.computerAttacks(playerBoard,x,y)
+
+# Hace falta 2 tableros que guarden los impactos efectuados. 
+
+def main():
+
+    print("Welcome to Battleship!")
+    utils.generateRandomBoard(playerBoard)
+
+    # aquí un while boats_alive_computer & boats_alive_player
+    playerMove()
     
-    
+    if k.boats_alive_computer == 0:
+        print("CONGRATULATIONS YOU WON !!!")
+
+     
+
+
+
+main()
 
 
 
