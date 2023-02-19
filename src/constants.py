@@ -5,19 +5,44 @@
 # 1 boat with length of 4
 
 import numpy as np
+import pygame
+from pygame import mixer
+
+mixer.init()
 
 
+hit = "✅"
+miss = "❌"
 
 
 boat_size_array = [4,3,3,2,2,2,1,1,1,1]
 
 computerLives = 4
-
 playerLives = 20
 
+playerTurn = True
+computerTurn = False
 
 
+playerShotsFired = 0
+computerShotsFired = 0
 
+exitGame = True
+
+# hit = "X"
+# miss = "-"
+
+
+def sounds(sound):
+  mixer.music.load("./src/assets/" +sound+".mp3")
+  mixer.music.set_volume(0.4)
+  mixer.music.play()
+
+    
+  
+       
+
+  
 
 d = {
   "a":{
