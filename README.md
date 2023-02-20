@@ -1,6 +1,8 @@
 # Battleship ⛴
 Battleship game developed using Python, Numpy and Pygame.
 
+![alt text](https://miro.medium.com/max/1200/1*MqAtYx5e_k9S2M9sXTqEXQ.jpeg)
+
 In this version of the game the user will be able to play against the computer a simplified version of Battleship.
 
 
