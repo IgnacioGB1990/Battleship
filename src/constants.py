@@ -14,10 +14,18 @@ mixer.init()
 hit = "✅"
 miss = "❌"
 
+# hit = "X"
+# miss = "-"
+
 
 boat_size_array = [4,3,3,2,2,2,1,1,1,1]
 
-computerLives = 4
+
+#UNCOMMENT FOR FULL MATCH
+# computerLives = 20 
+
+# COMMENT FOR FULL MATCH
+computerLives = 4 
 playerLives = 20
 
 playerTurn = True
@@ -29,8 +37,7 @@ computerShotsFired = 0
 
 exitGame = True
 
-# hit = "X"
-# miss = "-"
+
 
 
 def sounds(sound):
@@ -42,24 +49,3 @@ def sounds(sound):
   
        
 
-  
-
-d = {
-  "a":{
-      "boats": 4,
-      "length": 1
-  },
-    "b":{
-      "boats": 3,
-      "length": 2
-  },
-    "c":{
-      "boats": 2,
-      "length": 3
-  },
-    "d":{
-      "boats": 1,
-      "length": 4
-  },
-
-}

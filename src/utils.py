@@ -5,12 +5,9 @@ from pygame import mixer
 import constants as k
 import random
 
-
 mixer.init()
 
-
 def position_boat(eslora,tablero):
-
 
     while True:
 
@@ -45,19 +42,18 @@ def generateRandomBoard(tablero):
 
     for eslora in k.boat_size_array:
         position_boat(eslora,tablero)
-        #utils.position_boat(eslora,tablero_computer)
+        
+def generateRandomBoardComputer(tablero):
 
+    for eslora in k.boat_size_array:
+        position_boat(eslora,tablero)
 
-
-
-
-
-def playerAttacks(x,y,computerBoard,tablero_blanco_computer):
+def playerAttacks(x,y,computerBoard,computerEmptyBoard):
 
     if computerBoard[x,y]=="O":
         print("\n>>>>>>>>>>>>>>>  HIT <<<<<<<<<<<<<<<\n")
-        computerBoard[x,y]="X"
-        tablero_blanco_computer[x,y]=k.hit
+        computerBoard[x,y]=k.hit
+        computerEmptyBoard[x,y]=k.hit
         k.playerShotsFired+=1
         k.computerLives-=1
         k.sounds("hit")
@@ -67,7 +63,7 @@ def playerAttacks(x,y,computerBoard,tablero_blanco_computer):
         print("\n You already tried to shoot that target! \n")
     else:
         computerBoard[x,y]=k.miss
-        tablero_blanco_computer[x,y]=k.miss
+        computerEmptyBoard[x,y]=k.miss
         k.playerShotsFired+=1
         k.playerTurn = False
         k.computerTurn = True
