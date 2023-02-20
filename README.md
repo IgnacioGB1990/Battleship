@@ -6,7 +6,7 @@ In this version of the game the user will be able to play against the computer a
 
 # How to play
 
-1. Each player will be assigned a random ship position prior the start of the game. The number of ships consist of (in full version, see below warning):
+1. Each player will be assigned a random ship position prior the start of the game. The number of ships consist of :
 
 * 4 ships with length of 1
 * 3 ships with length of 2
@@ -24,11 +24,10 @@ In this version of the game the user will be able to play against the computer a
 
 
 > **Warning**
+
 > For the purpose of the demo only 4 boats are assigned to the computer. Coordinates (0,0), (0,1), (1,0) and (1,1).
 
 ### For full match
-
-In case you want to play a full match:
 
 Uncomment:
 Line 68 in main.py
@@ -37,3 +36,6 @@ Line 25 in constants.py
 Comment:
 Line 14 in main.py
 Line 28 in constants.py
+
+> **Note**
+> For a more immersive experience don't forget to turn your computer´s sound on 🎶
