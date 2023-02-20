@@ -16,9 +16,9 @@ The number of ships consist of :
 
 2. For every successful hit the user gets another try.
 
-3. Match ends when player/computer manages to sink all rivals ships.
+3. Match ends when player/computer manages to sink all rival ships.
 
-4. Coordinates ( x, y ) will range between 0 and 9.
+4. In order to attack, you will be asked to insert coordinates ( x, y ) ranging from 0 and 9.
 
 ### Legend
 1. ❌ = water
