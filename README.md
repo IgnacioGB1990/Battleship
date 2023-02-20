@@ -45,10 +45,6 @@ Line 14 in main.py
 
 Line 28 in constants.py
 
-> **Note**
-
-> For a more immersive experience don't forget to turn your computer´s sound on 🎶
-
 ### How to run
 
 1. Copy on terminal:
@@ -62,3 +58,8 @@ git clone https://github.com/IgnacioGB1990/Battleship.git
 3. Open main.py
 
 4. On VS Code Run => Run => Run Without Debugging
+
+
+> **Note**
+
+> For a more immersive experience don't forget to turn your computer´s sound on 🎶
