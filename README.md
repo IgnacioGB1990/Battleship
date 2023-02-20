@@ -33,13 +33,13 @@ The number of ships consist of :
 
 ### For full match
 
-Uncomment:
+<ins>Uncomment:</ins>
 
 Line 68 in main.py
 
 Line 25 in constants.py
 
-Comment:
+<ins>Comment:</ins>
 
 Line 14 in main.py
 
