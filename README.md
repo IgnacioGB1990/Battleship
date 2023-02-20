@@ -19,5 +19,5 @@ In this version of the game the user will be able to play against the computer a
 
 ### Legend
 1. "-" = water
-2. "O" = part of ship located
-3. "X" = part of ship damaged
+2. "✅" = part of ship located
+3. "❌" = part of ship damaged
