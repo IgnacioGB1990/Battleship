@@ -39,3 +39,11 @@ Line 28 in constants.py
 
 > **Note**
 > For a more immersive experience don't forget to turn your computer´s sound on 🎶
+
+### How to run
+
+Copy on your terminal:
+
+```
+https://github.com/IgnacioGB1990/Battleship.git
+```
