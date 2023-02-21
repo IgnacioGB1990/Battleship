@@ -61,6 +61,7 @@ git clone https://github.com/IgnacioGB1990/Battleship.git
 
 4. On VS Code Run => Run => Run Without Debugging
 
+In case you want to exit the game you can type **exit** or **surrender**.
 
 > **Note**
 
